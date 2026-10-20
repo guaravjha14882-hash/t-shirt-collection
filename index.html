@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>Urban Threads | Graphic T-Shirts</title>
+<style>
+:root{--ink:#111;--muted:#777;--paper:#f7f7f5;--accent:#d8ff3e;--line:#e9e9e5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.topbar{background:#111;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:1.4px}header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;gap:18px}
+.logo{font-size:22px;font-weight:950;letter-spacing:-1px;text-decoration:none;color:#111}.logo span{background:var(--accent);padding:3px 5px;margin-left:2px}
+.navlinks{display:flex;gap:24px;font-size:13px;font-weight:700}.navlinks a{color:#222;text-decoration:none}.bag{border:1px solid #ddd;padding:10px 13px;border-radius:30px;font-size:12px;font-weight:800}
+.hero{max-width:1240px;margin:24px auto 0;padding:0 24px}.hero-inner{background:#141414;color:#fff;min-height:310px;border-radius:18px;display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;position:relative}
+.hero-copy{padding:48px 44px;align-self:center;z-index:1}.eyebrow{font-size:11px;letter-spacing:3px;color:var(--accent);font-weight:800}h1{font-size:clamp(36px,5vw,64px);line-height:.98;letter-spacing:-2.8px;margin:17px 0}.hero p{color:#ccc;line-height:1.6;max-width:430px;font-size:14px}.hero-cta{display:inline-block;background:var(--accent);color:#111;text-decoration:none;font-size:12px;font-weight:900;padding:14px 20px;border-radius:4px;margin-top:12px}
+.hero-art{display:flex;align-items:center;justify-content:center;position:relative;padding:20px}.hero-art:before{content:"";position:absolute;width:290px;height:290px;background:var(--accent);border-radius:50%;filter:blur(1px);opacity:.95}.hero-art img{position:relative;width:min(100%,330px);height:290px;object-fit:contain;mix-blend-mode:normal;border-radius:10px;transform:rotate(3deg)}
+.trust{max-width:1240px;margin:0 auto;padding:17px 24px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;color:#555;font-size:11px;font-weight:800;letter-spacing:.6px;border-bottom:1px solid var(--line)}
+.section{max-width:1240px;margin:0 auto;padding:34px 24px 64px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px}.section-head h2{font-size:30px;letter-spacing:-1.2px;margin:0}.section-head p{margin:7px 0 0;color:var(--muted);font-size:13px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid #ddd;background:#fff;padding:9px 13px;border-radius:30px;font-size:11px;font-weight:800;cursor:pointer}.filter.active{background:#111;color:#fff;border-color:#111}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.card{background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0000000c}.photo{position:relative;background:#eee;aspect-ratio:4/4.7;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.card:hover .photo img{transform:scale(1.035)}.sale{position:absolute;top:12px;left:12px;background:var(--accent);font-size:10px;font-weight:950;padding:6px 8px;border-radius:3px}.details{padding:14px}.category{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#888;font-weight:800}.name{font-size:14px;font-weight:800;margin:7px 0 10px}.prices{display:flex;align-items:center;gap:8px}.price{font-size:18px;font-weight:950}.old{font-size:12px;color:#999;text-decoration:line-through}.off{font-size:10px;color:#367c18;font-weight:900}.buy{display:block;text-align:center;background:#111;color:#fff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:.7px;padding:13px;margin-top:13px;border-radius:5px}.buy:hover{background:#333}
+.banner{max-width:1192px;margin:0 auto 60px;background:var(--accent);padding:26px 30px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:18px}.banner strong{font-size:22px;letter-spacing:-.8px}.banner span{font-size:12px}.banner a{background:#111;color:#fff;padding:13px 17px;text-decoration:none;font-size:11px;font-weight:900;border-radius:4px;white-space:nowrap}
+footer{background:#111;color:#fff;padding:30px 24px}.foot{max-width:1192px;margin:auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px;color:#aaa}.foot strong{color:#fff;font-size:16px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-inner{grid-template-columns:1fr .7fr}.hero-copy{padding:35px 28px}.hero-art img{height:240px}}
+@media(max-width:650px){.nav{padding:15px 16px}.navlinks{display:none}.hero{padding:0 14px;margin-top:14px}.hero-inner{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:32px 24px 10px}h1{font-size:44px}.hero-art{height:190px;padding:0 20px 20px}.hero-art:before{width:160px;height:160px}.hero-art img{height:180px;width:80%}.trust{gap:12px;padding:15px;font-size:9px}.section{padding:28px 14px 45px}.section-head h2{font-size:25px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.details{padding:10px}.name{font-size:12px}.price{font-size:16px}.buy{padding:12px 5px;font-size:10px}.banner{margin:0 14px 40px;padding:20px;align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar">NEW DROP • EVERYDAY STREETWEAR • LIMITED-TIME PRICES</div>
+<header><nav class="nav">
+<a class="logo" href="#">URBAN<span>THREADS</span></a>
+<div class="navlinks"><a href="#shop">SHOP ALL</a><a href="#shop">GRAPHIC TEES</a><a href="#about">ABOUT</a></div>
+<a class="bag" href="#shop">EXPLORE COLLECTION ↓</a>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<div class="hero-copy"><div class="eyebrow">THE STREETWEAR EDIT / 2026</div><h1>WEAR YOUR<br>OWN STORY.</h1><p>Bold graphics. Easy everyday fits. Find your next favourite tee without stretching your budget.</p><a class="hero-cta" href="#shop">SHOP THE COLLECTION&nbsp; ↗</a></div>
+<div class="hero-art"><img src="images/product-01.jpg" alt="Featured graphic t-shirt"></div>
+</div></section>
+<div class="trust"><span>✓ EVERYDAY STREET STYLE</span><span>✓ PRICES FROM ₹299</span><span>✓ QUICK ORDER FORM</span><span>✓ NEW GRAPHIC DROPS</span></div>
+<section class="section" id="shop">
+<div class="section-head"><div><h2>THE T-SHIRT DROP.</h2><p>Graphic tees made for your everyday rotation.</p></div><div style="font-size:11px;color:#777;font-weight:800">19 STYLES</div></div>
+<div class="filters" id="filters"><button class="filter active" data-category="All">ALL TEES</button><button class="filter" data-category="Streetwear">STREETWEAR</button><button class="filter" data-category="Graphic Tees">GRAPHIC</button><button class="filter" data-category="Sportswear">SPORTSWEAR</button><button class="filter" data-category="Essentials">ESSENTIALS</button><button class="filter" data-category="Anime">ANIME</button></div>
+<div class="grid" id="product-grid"></div>
+</section>
+<section class="banner" id="about"><div><strong>YOUR FIT. YOUR STATEMENT.</strong><br><span>Pick your design and tap Buy Now to place your order.</span></div><a href="https://docs.google.com/forms/d/1-QqKROhqY8aeJUCPiS7faldSX-SFgCdwvTrjULe7OZ0/viewform" target="_blank" rel="noopener">ORDER NOW ↗</a></section>
+</main>
+<footer><div class="foot"><div><strong>URBAN THREADS</strong><br><br>Streetwear for your everyday.</div><div>GRAPHIC TEES &nbsp; • &nbsp; EVERYDAY STYLE &nbsp; • &nbsp; NEW DROPS<br><br>© 2026 Urban Threads. All rights reserved.</div></div></footer>
+<script>
+const products = [{"name": "Nexus Graphic Tee", "old": "499", "price": "399", "category": "Streetwear", "image": "images/product-01.jpg"}, {"name": "Classic Black Tee", "old": "449", "price": "349", "category": "Essentials", "image": "images/product-02.jpg"}, {"name": "American Legend Tee", "old": "499", "price": "399", "category": "Streetwear", "image": "images/product-03.jpg"}, {"name": "Make Money Tee", "old": "499", "price": "399", "category": "Graphic Tees", "image": "images/product-04.jpg"}, {"name": "Chicago Sports Tee", "old": "499", "price": "449", "category": "Sportswear", "image": "images/product-05.jpg"}, {"name": "Wolf Art Oversized Tee", "old": "499", "price": "399", "category": "Graphic Tees", "image": "images/product-06.webp"}, {"name": "Japanese Street Tee", "old": "449", "price": "349", "category": "Streetwear", "image": "images/product-07.jpg"}, {"name": "LA Number 23 Tee", "old": "499", "price": "449", "category": "Sportswear", "image": "images/product-08.png"}, {"name": "Minimal Hype Tee", "old": "399", "price": "299", "category": "Essentials", "image": "images/product-09.png"}, {"name": "Flame Graphic Tee", "old": "499", "price": "399", "category": "Graphic Tees", "image": "images/product-10.jpg"}, {"name": "Anime Energy Tee", "old": "499", "price": "399", "category": "Anime", "image": "images/product-11.jpg"}, {"name": "Money Mindset Tee", "old": "499", "price": "399", "category": "Graphic Tees", "image": "images/product-12.jpg"}, {"name": "Urban Attitude Tee", "old": "449", "price": "349", "category": "Streetwear", "image": "images/product-13.jpg"}, {"name": "Discover Graphic Tee", "old": "449", "price": "349", "category": "Graphic Tees", "image": "images/product-14.jpg"}, {"name": "Culture Typography Tee", "old": "499", "price": "399", "category": "Streetwear", "image": "images/product-15.jpg"}, {"name": "Attitude Print Tee", "old": "449", "price": "349", "category": "Graphic Tees", "image": "images/product-16.jpg"}, {"name": "Let’s Do It Tee", "old": "449", "price": "349", "category": "Essentials", "image": "images/product-17.jpg"}, {"name": "Retro Graphic Tee", "old": "499", "price": "399", "category": "Streetwear", "image": "images/product-18.jpg"}, {"name": "Everyday Black Tee", "old": "399", "price": "299", "category": "Essentials", "image": "images/product-19.jpg"}];
+const formLink = "https://docs.google.com/forms/d/1-QqKROhqY8aeJUCPiS7faldSX-SFgCdwvTrjULe7OZ0/viewform";
+const grid = document.getElementById('product-grid');
+function render(category='All') {
+  grid.innerHTML = products.filter(p => category === 'All' || p.category === category).map(p => {
+    const discount = Math.round((1 - Number(p.price)/Number(p.old))*100);
+    return `<article class="card">
+      <div class="photo"><img loading="lazy" src="${p.image}" alt="${p.name}"><span class="sale">${discount > 0 ? discount + '% OFF' : 'SPECIAL PRICE'}</span></div>
+      <div class="details"><div class="category">${p.category}</div><div class="name">${p.name}</div>
+      <div class="prices"><span class="price">₹${p.price}</span><span class="old">₹${p.old}</span><span class="off">${discount}% OFF</span></div>
+      <a class="buy" href="${formLink}" target="_blank" rel="noopener">BUY NOW&nbsp; ↗</a></div>
+    </article>`;
+  }).join('');
+}
+document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active'); render(btn.dataset.category);
+}));
+render();
+</script>
+</body></html>
